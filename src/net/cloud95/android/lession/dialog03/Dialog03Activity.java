@@ -23,17 +23,17 @@ public class Dialog03Activity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 需要在狀態列顯示處理中圖示，
+        // 需要在狀態列顯示處理中圖示(畫圈圈的進度)，
         // 一定要在指定Activity元件畫面配置資源之前，
         // 使用這行敘述執行設定
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);//取得視窗特徵
+        
         setContentView(R.layout.activity_dialog03);
     
         processViews();
         
-        // 建立一個測試進度對話框的Handler物件
-        
-       progressHandler = new Handler(){
+        // 建立一個測試進度對話框的Handler物件     
+       progressHandler = new Handler(){ //是一種執行序
     	   
     	   public void handleMessage(Message msg){
     		   super.handleMessage(msg);
