@@ -93,7 +93,7 @@ public class Dialog03Activity extends Activity {
         // 設定進度對話框目前的進度
     	progressDialog.setProgress(0);
         // 第一次執行Handler
-    	progressHandler.sendEmptyMessage(0);
+    	progressHandler.sendEmptyMessage(0);//0是代表handler的編號
         // 加入取消按鈕
     	progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE,"Cancle",new DialogInterface.OnClickListener() {
 			
